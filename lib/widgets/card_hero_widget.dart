@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:marvel_heroes/models/character.dart';
 import 'package:marvel_heroes/shared/theme/text/text_styles.dart';
 
 class CardHero extends StatelessWidget {
-  const CardHero({Key? key}) : super(key: key);
+  final Character character;
+  const CardHero({Key? key, required this.character}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,13 +20,14 @@ class CardHero extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(15),
-            child: Image.asset("assets/chars/spider-man.png"),
+            child: Image.asset(character.imagePath),
           ),
           Positioned(
             bottom: 54,
             left: 12,
+            top: 166,
             child: Text(
-              "Peter Parker",
+              character.alterEgo,
               style: TextStyles.cardSubtitle,
             ),
           ),
@@ -32,9 +35,9 @@ class CardHero extends StatelessWidget {
             bottom: 12,
             left: 12,
             right: 39,
-            top: 178,
+            top: 173,
             child: Text(
-              "Peter Parker",
+              character.name,
               style: TextStyles.cardTitle,
             ),
           ),

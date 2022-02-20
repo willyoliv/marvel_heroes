@@ -1,8 +1,8 @@
 import 'abilities.dart';
 import 'caracteristics.dart';
 
-class Hero {
-  Hero({
+class Character {
+  Character({
     required this.name,
     required this.alterEgo,
     required this.imagePath,
@@ -19,7 +19,7 @@ class Hero {
   late final Abilities abilities;
   late final List<String> movies;
 
-  Hero.fromJson(Map<String, dynamic> json) {
+  Character.fromJson(Map<String, dynamic> json) {
     name = json['name'];
     alterEgo = json['alterEgo'];
     imagePath = json['imagePath'];
