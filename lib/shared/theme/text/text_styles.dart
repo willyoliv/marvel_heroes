@@ -6,7 +6,7 @@ abstract class TextStyles {
     fontFamily: 'Gilroy',
     fontWeight: FontWeight.w900,
     fontSize: 40,
-    color: Colors.black,
+    color: Colors.white,
   );
 
   static TextStyle homeTitle = const TextStyle(
@@ -30,11 +30,11 @@ abstract class TextStyles {
     color: AppColors.primaryRed,
   );
 
-  static TextStyle profileSubtitle = const TextStyle(
+  static TextStyle profileSubtitle = TextStyle(
     fontFamily: 'Gilroy',
     fontWeight: FontWeight.w500,
     fontSize: 16,
-    color: Colors.black,
+    color: AppColors.primaryGrey,
   );
 
   static TextStyle homeSubtitle = TextStyle(
@@ -62,7 +62,7 @@ abstract class TextStyles {
     fontFamily: 'Gilroy',
     fontWeight: FontWeight.normal,
     fontSize: 12,
-    color: Colors.black,
+    color: Colors.white,
   );
 
   static TextStyle cardSubtitle = const TextStyle(

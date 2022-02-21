@@ -4,7 +4,6 @@ import 'package:marvel_heroes/controllers/heroes_controller.dart';
 import 'package:marvel_heroes/shared/theme/colors/app_colors.dart';
 import 'package:marvel_heroes/shared/theme/text/text_styles.dart';
 import 'package:marvel_heroes/widgets/badge_widget.dart';
-import 'package:marvel_heroes/widgets/card_hero_widget.dart';
 import 'package:marvel_heroes/widgets/character_list_widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -19,13 +18,13 @@ class _HomePageState extends State<HomePage> {
 
   void loadingJson() async {
     await _controller.start();
+    setState(() {});
   }
 
   @override
   void initState() {
     super.initState();
     _controller = HeroesController();
-    print(_controller);
     loadingJson();
   }
 
