@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:marvel_heroes/models/character.dart';
 import 'package:marvel_heroes/shared/theme/text/text_styles.dart';
 
-class CardHero extends StatelessWidget {
+class CardHeroWidget extends StatelessWidget {
   final Character character;
-  const CardHero({Key? key, required this.character}) : super(key: key);
+  const CardHeroWidget({Key? key, required this.character}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -38,11 +38,14 @@ class CardHero extends StatelessWidget {
             Positioned(
               bottom: 12,
               left: 12,
-              right: 39,
+              // right: 39,
               top: 173,
-              child: Text(
-                character.name,
-                style: TextStyles.cardTitle,
+              child: SizedBox(
+                width: 130,
+                child: Text(
+                  character.name,
+                  style: TextStyles.cardTitle,
+                ),
               ),
             ),
           ],

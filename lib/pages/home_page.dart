@@ -91,27 +91,27 @@ class _HomePageState extends State<HomePage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
-                    Badge(
+                    BadgeWidget(
                       imageUrl: "assets/icons/vector.svg",
                       beginColor: Color(0xFF005BEA),
                       endColor: Color(0xFF00C6FB),
                     ),
-                    Badge(
+                    BadgeWidget(
                       imageUrl: "assets/icons/villain.svg",
                       beginColor: Color(0xFFED1D24),
                       endColor: Color(0xFFED1F69),
                     ),
-                    Badge(
+                    BadgeWidget(
                       imageUrl: "assets/icons/antihero.svg",
                       beginColor: Color(0xFFB224EF),
                       endColor: Color(0xFF7579FF),
                     ),
-                    Badge(
+                    BadgeWidget(
                       imageUrl: "assets/icons/alien.svg",
                       beginColor: Color(0xFF0BA360),
                       endColor: Color(0xFF3CBA92),
                     ),
-                    Badge(
+                    BadgeWidget(
                       imageUrl: "assets/icons/human.svg",
                       beginColor: Color(0xFFFF7EB3),
                       endColor: Color(0xFFFF758C),
@@ -120,23 +120,23 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               const SizedBox(height: 48),
-              CharecterList(
+              CharecterListWidget(
                 characters: _controller.heroes,
                 sectionTitle: "Heróis",
               ),
-              CharecterList(
+              CharecterListWidget(
                 characters: _controller.villains,
                 sectionTitle: "Vilões",
               ),
-              CharecterList(
+              CharecterListWidget(
                 characters: _controller.antiHeroes,
                 sectionTitle: "Anti-heróes",
               ),
-              CharecterList(
+              CharecterListWidget(
                 characters: _controller.aliens,
                 sectionTitle: "Alienígenas",
               ),
-              CharecterList(
+              CharecterListWidget(
                 characters: _controller.humans,
                 sectionTitle: "Humanos",
               ),

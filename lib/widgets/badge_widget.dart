@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class Badge extends StatelessWidget {
+class BadgeWidget extends StatelessWidget {
   final String imageUrl;
   final Color beginColor;
   final Color endColor;
 
-  const Badge({
+  const BadgeWidget({
     Key? key,
     required this.imageUrl,
     required this.beginColor,
@@ -26,6 +26,14 @@ class Badge extends StatelessWidget {
           end: Alignment.bottomCenter,
           colors: [beginColor, endColor],
         ),
+        boxShadow: [
+          BoxShadow(
+            color: beginColor.withOpacity(0.15),
+            offset: const Offset(0.0, 10.0),
+            blurRadius: 10,
+            spreadRadius: 0,
+          )
+        ],
       ),
       child: SvgPicture.asset(
         imageUrl,

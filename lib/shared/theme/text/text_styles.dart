@@ -30,6 +30,13 @@ abstract class TextStyles {
     color: AppColors.primaryRed,
   );
 
+  static TextStyle sectionAbility = const TextStyle(
+    fontFamily: 'Gilroy',
+    fontWeight: FontWeight.bold,
+    fontSize: 18,
+    color: Colors.white,
+  );
+
   static TextStyle profileSubtitle = TextStyle(
     fontFamily: 'Gilroy',
     fontWeight: FontWeight.w500,

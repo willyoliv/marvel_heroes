@@ -4,10 +4,10 @@ import 'package:marvel_heroes/shared/theme/text/text_styles.dart';
 
 import 'card_hero_widget.dart';
 
-class CharecterList extends StatelessWidget {
+class CharecterListWidget extends StatelessWidget {
   final String sectionTitle;
   final List<Character> characters;
-  const CharecterList({
+  const CharecterListWidget({
     Key? key,
     required this.sectionTitle,
     required this.characters,
@@ -41,7 +41,7 @@ class CharecterList extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemCount: characters.length,
               itemBuilder: (context, index) {
-                return CardHero(
+                return CardHeroWidget(
                   character: characters[index],
                 );
               }),
